@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "GEM5ToMcPAT.py", line 161, in <module>
+    main()
+  File "GEM5ToMcPAT.py", line 56, in main
+    dumpMcpatOut(opts.out)
+  File "GEM5ToMcPAT.py", line 76, in dumpMcpatOut
+    param.attrib['value'] = str(eval(str(value)))
+  File "<string>", line 1, in <module>
+TypeError: unsupported operand type(s) for /: 'float' and 'list'
