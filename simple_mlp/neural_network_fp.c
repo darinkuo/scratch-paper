@@ -54,7 +54,7 @@ float mlp(float *input) {
 #ifdef DRG_DEBUG
     printf("L1 (ReLU)\n");
     print_vector(activation_1, WEIGHTS_1_DIM1);
-    //m5_dump_reset_stats(0,0);
+    m5_dump_reset_stats(0,0);
 #endif
     /* layer 2 */
     for (int i = 0; i < WEIGHTS_2_DIM0; i++) {
@@ -73,7 +73,7 @@ float mlp(float *input) {
 #ifdef DRG_DEBUG
     printf("L2 (ReLU)\n");
     print_vector(activation_2, WEIGHTS_2_DIM1);
-    //m5_dump_reset_stats(0,0);
+    m5_dump_reset_stats(0,0);
 #endif
     /* layer 3 */
     for (int i = 0; i < WEIGHTS_3_DIM0; i++) {
