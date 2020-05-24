@@ -1,6 +1,0 @@
-#Issues
-*Resolve issues with parser
-*the resulting xml file will SegFault when running in mcpat
-```
-mcpat -infile mcpat-out.xml
-```

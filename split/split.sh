@@ -28,3 +28,5 @@ if [ $# -lt 2 ]; then
         strip $1
         csplit -z -f $2'/dump' $1 '/---------- Begin Simulation Statistics ----------/' '{*}'
 fi
+
+## TO DO: ADD WAY TO TAKE DUMPS, CONVERT TO MCPAT.XML AND THEN RUN IN MCPAT

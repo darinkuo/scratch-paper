@@ -1,0 +1,3 @@
+[submodule "cMcPAT"]
+	path = cMcPAT
+	url = https://github.com/H2020-COSSIM/cMcPAT
