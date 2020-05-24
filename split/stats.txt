@@ -1,4 +1,3 @@
-
 ---------- Begin Simulation Statistics ----------
 final_tick                                  751353000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
 host_inst_rate                                1239996                       # Simulator instruction rate (inst/s)
