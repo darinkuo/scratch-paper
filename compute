@@ -1,0 +1,52 @@
+#!/bin/bash
+
+run() {
+    echo "$1" "$2" "$3" "$4" "$5" "$6" "$7"
+    python $1 $2 $3 $4 -o $5
+    ./$6 -infile $5 -printlevel detail > $7
+}
+################################
+# display help text on cmdline #
+################################
+display_help() {
+    echo "Usage: $0 [-d <1-5>] [-h] <gem5 stats filepath (.txt)> <gem5 config filepath (.json)> <template filepath (.xml)> <output filepath (.xml)> <mcpat parser path> <mcpat path> <mcpat output filename>"
+    echo
+    echo "  -h,        Display help text"
+    echo "  -d,        Detail of mcpat output [1-5] (default is 5)"
+    echo 
+    exit 0
+}
+
+##############################
+# Check if parameter options # 
+# are given on the cmdline   #
+##############################
+detail=5
+while getopts ":d:h" opt; do
+    case "${opt}" in
+        h | \? )
+            display_help
+            ;;
+        d)  
+            if [[ (${OPTARG} -lt 1) || (${OPTARG} -gt 5) ]]; then
+                echo "Illegal argument: number be a number between 1 and 5"
+                exit 0
+            else
+                detail=${OPTARG}
+            fi
+            ;;
+    esac
+done
+shift $((OPTIND-1))
+
+################################
+# Check if number of arguments # 
+# are valid                    #
+################################
+if [ $# -lt 7 ]; then
+    echo "Illegal number of arguments: need 7 received $#"
+    display_help
+else
+    run "$5" "$1" "$2" "$3" "$4" "$6" "$7"
+    exit 0
+fi
