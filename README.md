@@ -5,5 +5,4 @@ An assorted collection of test files and scripts for gem5 and Tensorflow Lite fo
 * m5ops_example - example script to play around with m5 annotations
 * mcpat-templates - modified template files from cMcPat for the current release of gem5
 * simple_mlp - simple MLP model written in C
-* split - bash script to split a stats file into multiple text files
-* compute - bash script to feed mcpat stats into parser and produces mcpat file
+* parsing - contains scripts for interpreting and parsing gem5 stats into mcpat

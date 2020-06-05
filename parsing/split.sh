@@ -26,7 +26,7 @@ if [ $# -lt 2 ]; then
         echo '----------------------------------------------'
         echo 'Splitting stats files:' $1
         strip $1
-        csplit -z -f $2'/dump' $1 '/---------- Begin Simulation Statistics ----------/' '{*}'
+        csplit -z -b "%08d.txt" -f $2'/stats' $1 '/---------- Begin Simulation Statistics ----------/' '{*}'
 fi
 
-## TO DO: ADD WAY TO TAKE DUMPS, CONVERT TO MCPAT.XML AND THEN RUN IN MCPAT
+## DONE IN 
