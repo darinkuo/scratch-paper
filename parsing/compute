@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# A script that takes gem5 statistics and parses them into an McPat energy estimation
+# To Do :
+# Implement parsing for multiple statistic files in a given folder
+
+# Example
+# ./compute stats.txt m5out/config.json ../templates/x86_AtomicSimpleCPU_template_modified.xml output.xml ../cMcPAT/Scripts/GEM5ToMcPAT.py ../cMcPat/mcpat/mcpat mcpat-output.txt
+
 run() {
     echo "$1" "$2" "$3" "$4" "$5" "$6" "$7"
     python $1 $2 $3 $4 -o $5
